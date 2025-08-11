@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Uji Coba</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      p#message {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #555;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Selamat Datang di Halaman Uji Coba!</h1>
+      <p>Tekan tombol di bawah untuk melihat efek JavaScript.</p>
+      <button id="myButton">Klik Saya</button>
+      <p id="message">Pesan akan muncul di sini.</p>
+    </div>
+
+    <script>
+      // Mendapatkan elemen tombol berdasarkan ID
+      const button = document.getElementById("myButton");
+      // Mendapatkan elemen paragraf pesan
+      const messageParagraph = document.getElementById("message");
+
+      // Menambahkan event listener saat tombol diklik
+      button.addEventListener("click", () => {
+        // Mengubah teks dari paragraf pesan
+        messageParagraph.textContent =
+          "Tombol telah diklik! Ini adalah hasil dari JavaScript.";
+        // Mengubah warna tombol
+        button.style.backgroundColor = "#28a745";
+      });
+    </script>
+  </body>
+</html>
